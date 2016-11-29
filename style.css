@@ -1,0 +1,40 @@
+body {
+  width: 100%;
+  min-height: 100%;
+  padding: 0;
+  margin: 0;
+  background: #232323;
+  color: white;
+}
+
+.canvas {
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+}
+
+.button-div {
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  text-align: center;
+}
+
+.button-div button {
+  margin: 2px;
+}
+
+.people {
+  fill: white;
+  stroke: 0px;
+}
+
+.label {
+  fill: white;
+}
+
+.btn-default {
+  background-color: white;
+}
