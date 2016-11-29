@@ -91,8 +91,11 @@ AIS.setup = function() {
     .style("opacity", 0)
     .on("click", function(d){
       d3.selectAll(".button-div button")
-        .classed("btn-primary", false);
-      d3.select(this).classed("btn-primary", true);
+        .classed("btn-primary", false)
+        .classed("btn-default", true);
+      d3.select(this)
+        .classed("btn-primary", true)
+        .classed("btn-default", false);
       AIS.draw("total", d3.select(this).attr("id"));
     });
 
