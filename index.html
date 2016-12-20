@@ -6,39 +6,63 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/tether/1.3.1/js/tether.min.js"></script>
 
     <script src="https://d3js.org/d3.v4.js"></script>
     <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/js/bootstrap.min.js" integrity="sha384-BLiI7JTZm+JWlgKa0M0kGRpJbF2J8q+qreVrKBC47e3K6BW78kGLrCkeRX6I9RoK" crossorigin="anonymous"></script>
-    <script src="./module/typed.js"></script>
+    <script src="typeScript/modules/typed/typed.js"></script>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css" integrity="sha384-AysaV+vQoT3kOAXZkl02PThvDr8HYKPZhNT5h/CXfBThSRXQ6jW5DO2ekP5ViFdi" crossorigin="anonymous">
     <link href="style.css" rel="stylesheet" />
   </head>
   <body>
     <div id="introduction" class="container">
-      <svg class="canvas">
-      </svg>
-      <div class="button-div row">
-      </div>
-        
-      <div id="slide-1">
-        <div id="div-1" class="row">
-          <h1>The robots are coming</h1>
-        </div>
-        <div id="div-2" class="row">
-          <h1>For our jobs</h1>
-        </div>
-        <div id="div-3" class="row">
-          <h1>Or are they?</h1>
-        </div>
-      </div>
 
-      <div id="slide-2">
-        <div id="div-1" class="row">
-          <h1>We asked 1002 Americans who have been out of college and in the workforce for a few years what they make of the robot revolution.</h1>
-        </div>
-      </div>
+      <div class="animation-timeline"><!--this element will scroll, triggering scroll-based animation-->
+  			<section class="scene" id="scene-1">
+          <div class="scene-commentary">
+  					<h3 id="scene-1-typed"></h3>
+  				</div>
+        </section>
+  			<section class="scene" id="scene-2">
+  				<div class="scene-commentary">
+  					<h3>We asked 1000 recently graduated Americans</h3>
+  					<p id="scene-2-typed"></p>
+            <div class="row">
+              <div class="col-md-3" id="scene-2-button-div">
+              </div>
+              <div class="col-md-9">
+                <svg id="scene-2-svg">
+                </svg>
+              </div>
+            </div>
+  				</div>
+  			</section>
+  			<section class="scene" id="scene-3">
+          <div>
+            <div class="scene-commentary">
+              <h3 id="scene-3-typed">About their opinions and impacts of AI on economy</h3>
+              <div class="btn-group" id="scene-3-button-div">
+
+              </div>
+            </div>
+    				<div class="scene-commentary scene-commentary-left">
+              <p id="scene-3-typed-left"></p>
+              <svg id="scene-3-svg-left">
+              </svg>
+    				</div>
+            <div class="scene-commentary scene-commentary-right">
+              <p id="scene-3-typed-right"></p>
+              <svg id="scene-3-svg-right">
+              </svg>
+    				</div>
+          </div>
+  			</section>
+  			<section class="scene scene-continuous" id="scene-4">
+  			</section>
+  			<section class="scene"></section><!--just a padder-->
+  		</div>
     </div>
     <script src="scripts/neu_ai_script.js"></script>
   </body>
