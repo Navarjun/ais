@@ -59,10 +59,9 @@ AIS.setup = function() {
       callback: function() {
         // paragraph DOM elements
         var ps = d3.select("#scene-2-button-div")
-          .selectAll("p")
+          .selectAll("button")
           .data(AIS.basicButtons)
           .enter()
-          .append("p")
           .append("button")
           .attr("class", function(d){ return d == "Big Picture" ? "btn scene-2-btn btn-primary" : "btn scene-2-btn btn-default"; })
           .attr("id", function(d){ return d.toLowerCase().replace(" ", "-"); })
